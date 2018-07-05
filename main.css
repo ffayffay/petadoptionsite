@@ -1,0 +1,24 @@
+.find-pet-banner {
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	background-color: whitesmoke;
+	text-align: center;
+	position: fixed;
+}
+
+.pet-div {
+	padding-top: 100px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pet-card {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid gray;
+	max-width: 500px;
+	padding: 15px;
+	margin: 15px;
+}
