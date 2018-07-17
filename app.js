@@ -1,5 +1,6 @@
 let randomPetButton = document.querySelector('.pet-button');
 let petDiv = document.querySelector('.pet-div');
+let petCard = document.querySelector('pet-card');
 
 randomPetButton.addEventListener('click', function(e) {
 	getPet()
@@ -34,7 +35,7 @@ function getPetDetails(randomPetId) { //gets the pet details and format for temp
 				name: pet.name['$t'],
 				breed: pet.breeds.breed['$t'],
 				description: pet.description['$t'],
-				picture: pet.media.photos.photo[1]['$t'],
+				picture: pet.media.photos.photo[2]['$t'],
 				sex: pet.sex['$t']
 
 			}
@@ -44,14 +45,15 @@ function getPetDetails(randomPetId) { //gets the pet details and format for temp
 function createTemplate(pet) {
 	let template = `
 	<div class="pet-card">
-		<h1>${pet.name}</h1>
+		<div class="card-img"><img src="${pet.picture}"></div>
+		<div class="card-info"></div>
+		<h1><small>Hi, I'm </small>${pet.name}</h1>
 		<ul>
-			<li>${pet.breed}</li>
-			<li>${pet.age}</li>
-			<li>${pet.sex}</li>
-			<p>${pet.description}</p>
+			<li>I am a ${pet.breed}</li>
+			<li>My age is ${pet.age}</li>
+			<li>Sex: ${pet.sex}</li>
 		</ul>
-		<div><img src="${pet.picture}"></div>
+		<div class="description-wrap"><p>${pet.description}</p></div>
 	</div>`
 
 		return template
@@ -60,3 +62,6 @@ function createTemplate(pet) {
 function createPetHTML(pet) {
 	petDiv.insertAdjacentHTML('beforeend', createTemplate(pet))
 }
+ 
+//NEED TO WRITE FUNCTION THAT DISPLAYS NOTHING IF THERE IS NO DISCRIPTION/NAME/AGE/SEX/PICTURE
+

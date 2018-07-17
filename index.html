@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="find-pet-banner">
-		<h2>Find Pets In Need of Adoption</h2>
-		<button class="pet-button">Click for Random Pet</button>
+	<div class="wrap-body"><header>
+		<div class="wrap-icon-banner">
+			<div class="wrap-icon">
+			<img src="https://www.findingrover.com/assets/lostPetIcon-86a9d56f70971329c89199a8a02f61cce2182f85017e04db2762f1ef6a2268ef.svg">
+			</div>
+			<h1>Find a pet in need of adoption!</h1>
+		</div>
+		
+
+		<nav>
+			<ul>
+				<a href="#">Location</a>
+				<a href="#">Breed</a>
+				<a href="#">Random</a>
+			</ul>
+		</nav>
+		</header>
+		
+		<div class="wrap-search">
+			<button class="pet-button">Click for Random Pet</button>
+			
+			<div class="wrap-form">
+				<div class="form-header">
+					<h1>Search for a specific pet:</h1>
+				</div>
+				
+				<div class="wrap-form-items">
+					<form>
+						<h2>Looking for a </h2><br>
+						<input type="radio" name="animal" value="Dog">Dog<br>
+						<input type="radio" name="animal" value="Cat">Cat<br>
+						<input type="radio" name="animal" value="Rabbit">Rabbit<br>
+					</form>
+
+					<form>
+						<h2>Age</h2><br>
+						<input type="radio" name="age" value="Baby">Baby<br>
+						<input type="radio" name="age" value="Young">Young<br>
+						<input type="radio" name="age" value="Adult">Adult<br>
+						<input type="radio" name="age" value="Senior">Senior<br>
+					</form>
+
+					<form>
+						<h2>Zip Code</h2><br>
+						<input type="text" name="zipcode">
+					</form>
+				</div>
+
+				<button class="submit">Submit</button>
+			</div>
+		</div>	
+
+		<div class="pet-div"></div>
 	</div>
 		
-	<div class="pet-div"></div>
-
 	<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
