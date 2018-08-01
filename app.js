@@ -2,11 +2,13 @@ let randomPetButton = document.querySelector('.pet-button');
 let petDiv = document.querySelector('.pet-div');
 let petCard = document.querySelector('pet-card');
 
-randomPetButton.addEventListener('click', function(e) {
-	getPet()
-		.then(pet => { createPetHTML(pet) })
+randomPetButton.addEventListener('click', petButtonClickHandler);
 
-});
+function petButtonClickHandler(e) {
+	e.preventDefault()
+	makeSearchRequest()
+		.then(pet => createPetHTML(pet))
+}
 
 function getPet() {
 	return getRandomPetId()
@@ -60,8 +62,18 @@ function createTemplate(pet) {
 }
 
 function createPetHTML(pet) {
-	petDiv.insertAdjacentHTML('beforeend', createTemplate(pet))
+	petDiv.innerHTML = createTemplate(pet)
 }
  
-//NEED TO WRITE FUNCTION THAT DISPLAYS NOTHING IF THERE IS NO DISCRIPTION/NAME/AGE/SEX/PICTURE
+// NEED TO WRITE FUNCTION THAT DISPLAYS NOTHING IF THERE IS NO DISCRIPTION/NAME/AGE/SEX/PICTURE
 
+function makeSearchRequest(pet) {
+	const form = document.getElementById('search-form');
+	const animal = form.animal.value;
+	const zipCode = form.zipcode.value;
+	const url = `http://api.petfinder.com/pet.getRandom?format=json&key=30813f445b233300ac28d89179cd71c7&animal=${animal}&location=${zipCode}&callback=?`;
+
+	return $.getJSON(url)
+		.then(response => response.petfinder.petIds.id['$t'])
+		.then(id => getPetDetails(id))
+}

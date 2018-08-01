@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="wrap-body"><header>
-		<div class="wrap-icon-banner">
-			<div class="wrap-icon">
-			<img src="https://www.findingrover.com/assets/lostPetIcon-86a9d56f70971329c89199a8a02f61cce2182f85017e04db2762f1ef6a2268ef.svg">
+	<div class="wrap-body">
+		<header>
+			<div class="wrap-icon-banner">
+				<div class="wrap-icon">
+					<img src="https://www.findingrover.com/assets/lostPetIcon-86a9d56f70971329c89199a8a02f61cce2182f85017e04db2762f1ef6a2268ef.svg">
+				</div>
+				<h1>Find a pet in need of adoption!</h1>
 			</div>
-			<h1>Find a pet in need of adoption!</h1>
-		</div>
-		
+			
 
-		<nav>
-			<ul>
-				<a href="#">Location</a>
-				<a href="#">Breed</a>
-				<a href="#">Random</a>
-			</ul>
-		</nav>
+			<nav>
+				<div class="search-options">
+			<form id="search-form">
+				<div class="search-form-item">
+					<label>Select Animal Type</label>
+					<select name="animal">
+						<option value="dog">Dog</option>
+						<option value="cat">Cat</option>
+						<option value="barnyard">Barnyard Animal</option>
+						<option value="reptile">Reptile</option>
+						<option value="bird">Bird</option>
+						<option value="horse">Horse</option>
+						<option value="smallfurry">Small Furry Animal</option>
+						<option value="">Random!</option>
+					</select>
+				</div>
+				<div class="search-form-item">
+					<label>Location By Zip</label>
+					<input type="text" name="zipcode"/>
+				</div>
+				<button class="pet-button">Click for Random Pet</button>
+			</form>
+		</div>		
+			</nav>
 		</header>
 		
+		<h1>HI IM A LONG WINDED H1</h1>
+
 		<div class="wrap-search">
-			<button class="pet-button">Click for Random Pet</button>
 			
-			<div class="wrap-form">
+			<!-- <div class="wrap-form">
 				<div class="form-header">
 					<h1>Search for a specific pet:</h1>
 				</div>
 				
 				<div class="wrap-form-items">
-					<form>
+					<form id="search-form">
 						<h2>Looking for a </h2><br>
-						<input type="radio" name="animal" value="Dog">Dog<br>
-						<input type="radio" name="animal" value="Cat">Cat<br>
-						<input type="radio" name="animal" value="Rabbit">Rabbit<br>
-					</form>
-
-					<form>
-						<h2>Age</h2><br>
-						<input type="radio" name="age" value="Baby">Baby<br>
-						<input type="radio" name="age" value="Young">Young<br>
-						<input type="radio" name="age" value="Adult">Adult<br>
-						<input type="radio" name="age" value="Senior">Senior<br>
-					</form>
-
-					<form>
-						<h2>Zip Code</h2><br>
-						<input type="text" name="zipcode">
+						<input type="radio" name="animal" value="dog">Dog<br/>
+						<input type="radio" name="animal" value="cat">Cat<br/>
+						<input type="radio" name="animal" value="barnyard">Barnyard Animal<br/>
+						<input type="radio" name="animal" value="bird">Barnyard Animal<br>
+						<input type="radio" name="animal" value="reptile">Reptile<br/>
+						<input type="radio" name="animal" value="horse">Horse<br/>
+						<input type="radio" name="animal" value="smallfurry">Small Furry Animal<br/>
+						<input type="radio" name="animal" value="">Random<br/><br/>
+			
+						<h2>Zip Code</h2><br/>
+						
+						
 					</form>
 				</div>
-
-				<button class="submit">Submit</button>
-			</div>
+			</div> -->
 		</div>	
 
 		<div class="pet-div"></div>
@@ -65,5 +80,6 @@
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="redo.js"></script>
 </body>
 </html>

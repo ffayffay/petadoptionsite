@@ -1,7 +1,8 @@
-* {
-        margin: 0;
-        padding: 0;
-    }
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
 
 .wrap-body {
 	display: flex;
@@ -13,35 +14,38 @@
 header {
 	display: flex;
 	background-color: #20b2aa;
-	min-height: 25vh;
+	height: 10vh;
 	align-items: flex-end;
-	justify-content: space-between;
 	padding-bottom: 10px;
 	border-bottom: 5px solid white;
 	font-family: 'Roboto', sans-serif;
 }
 
-header h1,
-nav {
-	margin: 20px;
-}
-
 .wrap-icon-banner {
+	position: relative;
 	display: flex;
 	align-items: center;
     margin-left: 10px;
 }
 
 .wrap-icon {
-	height: 150px;
+	position: absolute;
+	bottom: -20px;
+	width: 15%;
+	max-width: 90px;
+	min-width: 70px;
 	background-color: white;
 	border: 5px solid black;
 	border-radius: 50px;
-	margin-bottom: 10px;
 }
 
 img {
-	max-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+nav {
+	margin-left: auto;
 }
 
 nav a {
@@ -54,12 +58,10 @@ nav a {
     background-color: white;
 }
 
-button {
+.pet-button {
 	display: flex;
-	align-self: flex-start;
-	padding: 20px;
-	margin: 15px;
-	max-width: 100px;
+	padding: 5px;
+	max-width: 160px;
 	border: 3px solid #20b2aa;
     background-color: #b7b6b4;
     border-radius: 10px;
@@ -74,12 +76,28 @@ button {
 }
 
 .pet-div {
-	padding-top: 100px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	min-height: 300px;
-	min-width: 400px;
+	width: 100%;
+	max-height: 300px;
+	max-width: 400px;
+}
+
+.search-options #search-form {
+	display: flex;
+	margin-right: 15px;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+}
+
+.search-form-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin: 5px;
 }
 
 .wrap-search {
@@ -95,15 +113,12 @@ button {
     margin-top: 150px;
     flex-grow: 1;
     margin-right: 75px;
+    margin-left: 75px;
     background-color: #bce7e5;
     border: 5px solid #20b2aa;
     border-radius: 20px;
     min-height: 400px;
     min-width: 600px;
-}
-
-form {
-	margin-bottom: 15px;
 }
 
 form h2 {
@@ -154,20 +169,10 @@ form h2 {
     justify-content: center;
 }
 
-.slide {
-    position: absolute;
-    left: -600px;
-    width: 600px;
-    height: 370px;
-    background: blue;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
-}
 
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
 
-@keyframes slide {
-    100% { left: 0; }
+@media (max-width: 785px) {
+	.search-options {
+		display: none;
+	}
 }
