@@ -1,0 +1,18 @@
+notes
+
+make default response array
+
+check to see if animal is mix breed. if yes show both breeds.
+
+grab city, state, zipcode, contact email/phone number
+
+add loading bar
+
+add alternative optoins to be shown if picture or any information normally provided is not available
+
+COMPONENTS:
+*header-contains logo and h1 also contains search atm
+*search options- contains submit search button
+*pet div-wrapper for pet card
+*pet card-contains pet image, and description
+*footer

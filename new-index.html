@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Arapey" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="new-main.css">
+
+	<title>Pet Finder</title>
+</head>
+<body>
+
+	<div class="wrap-body">
+		<header>
+			<div class="wrap-icon-banner">
+				<div class="wrap-icon">
+					<img src="https://www.findingrover.com/assets/lostPetIcon-86a9d56f70971329c89199a8a02f61cce2182f85017e04db2762f1ef6a2268ef.svg">
+				</div>
+				<div class="wrap-banner">
+					<h1>Find a pet in need of adoption!</h1>
+				</div>
+			</div>
+
+			<div class="search-options">
+				<form id="search-form">
+					<div class="search-form-item">
+						<label>Select Animal Type</label>
+						<select name="animal">
+							<option value="dog">Dog</option>
+							<option value="cat">Cat</option>
+							<option value="barnyard">Barnyard Animal</option>
+							<option value="reptile">Reptile</option>
+							<option value="bird">Bird</option>
+							<option value="horse">Horse</option>
+							<option value="smallfurry">Small Furry Animal</option>
+							<option value="">Random!</option>
+						</select>
+					</div>
+					<div class="search-form-item">
+						<label>Location By Zip</label>
+						<input type="text" name="zipcode"/>
+					</div>
+					<div class="search-form-item">
+						<button class="pet-button">Click for Random Pet</button>
+					</div>
+				</form>
+			</div>
+		</header>
+
+		<div class="wrap-content">
+			<div class="pet-div">
+				<div class="pet-card"></div>
+			</div>
+
+			<div class="loading hidden">
+				<h4>Loading..</h4>
+			<div class="loader"></div>
+		</div>
+
+		</div>
+
+		<footer>
+			<div class="footer-div">FayCode</div>
+		</footer>
+
+
+
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

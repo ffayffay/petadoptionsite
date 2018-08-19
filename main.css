@@ -1,5 +1,6 @@
 body,
 html {
+	display: flex;
 	margin: 0;
 	padding: 0;
 }
@@ -8,13 +9,14 @@ html {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	min-width: 100vw;
 	background-color: #e5e4e2;
 }
 
 header {
 	display: flex;
 	background-color: #20b2aa;
-	height: 10vh;
+	min-height: 10vh;
 	align-items: flex-end;
 	padding-bottom: 10px;
 	border-bottom: 5px solid white;
@@ -37,6 +39,10 @@ header {
 	background-color: white;
 	border: 5px solid black;
 	border-radius: 50px;
+}
+
+.wrap-icon-banner h1 {
+	margin-left: 200px;
 }
 
 img {
@@ -80,8 +86,9 @@ nav a {
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
-	max-height: 300px;
-	max-width: 400px;
+	min-height: 300px;
+	position: relative;
+	/*max-width: 700px;*/
 }
 
 .search-options #search-form {
@@ -100,11 +107,6 @@ nav a {
 	margin: 5px;
 }
 
-.wrap-search {
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .wrap-form {
 	display: flex;
@@ -152,13 +154,13 @@ form h2 {
 
 .pet-card ul {
 	display: flex;
+	flex-direction: column;
     list-style: none;
     margin: 15px;
 }
 
 .pet-card li {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 3px;
 	font-weight: bold;
 }
 
@@ -169,10 +171,48 @@ form h2 {
     justify-content: center;
 }
 
+.loading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	background-color: #ea8947;
+	border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hidden {
+	display: none;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #20b2aa;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
 @media (max-width: 785px) {
 	.search-options {
 		display: none;
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrap-icon h1 {
+		font-size: 5px;
 	}
 }
